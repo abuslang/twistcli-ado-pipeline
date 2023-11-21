@@ -31,13 +31,6 @@ jobs:
       repository: rabbitmq-prisma
       command: push
       tags: prisma
-  - task: replacetokens@5
-    displayName: Get Prisma Cloud Secrets From Azure KeyVault
-    inputs:
-      rootDirectory: scripts
-      targetFiles: '**/*.sh'
-      tokenPattern: rm
-      keepToken: true
   - task: AzureCLI@2
     displayName: Install TwistCLI
     inputs:
